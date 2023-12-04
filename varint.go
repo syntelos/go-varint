@@ -34,7 +34,7 @@ func Write(w io.ByteWriter, src uint64) (ct uint64, er error) {
 	var b uint64 = src
 	var e byte
 
-	for x = 0; x <= 8; x++ {
+	for x = 0; ; x++ {
 
 		e = byte(b & 0x7F)
 
@@ -62,7 +62,7 @@ func Read(r io.ByteReader) (dst uint64, er error) {
 	var b byte
 	var s uint8 = 0
 
-	for x = 0; x < 8; x++ {
+	for x = 0; ; x++ {
 
 		b, er = r.ReadByte()
 		if nil != er {
