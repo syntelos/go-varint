@@ -1,4 +1,7 @@
-ULEB64 for GOPL
+ULEB64 I/O for GOPL
+
+  func Write(io.ByteWriter, uint64) (uint64, error)
+  func Read(io.ByteReader) (uint64, error)
 
 References
 
